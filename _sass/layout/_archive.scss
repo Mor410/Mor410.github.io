@@ -243,17 +243,3 @@
     }
   }
 }
-
-html:not([data-theme="dark"]) .page {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 12px;
-}
-
-html[data-theme="dark"] .page {
-  background: rgba(30, 30, 30, 0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 12px;
-}
