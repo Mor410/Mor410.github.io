@@ -10,7 +10,6 @@ html {
 }
 
 body {
-  /* Set via _themes.scss */
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 
@@ -19,11 +18,15 @@ body {
   padding-bottom: 9em;
   font-family: $global-font-family;
   line-height: 1.5;
+}
 
-  &.overflow--hidden {
-    /* when primary navigation is visible, the content in the background won't scroll */
-    overflow: hidden;
-  }
+/* Light mode background */
+html:not([data-theme="dark"]) body {
+  background-image: linear-gradient(
+    rgba(173, 216, 255, 0.28),
+    rgba(173, 216, 255, 0.28)
+  );
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
