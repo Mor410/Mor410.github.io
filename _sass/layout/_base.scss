@@ -20,7 +20,6 @@ body {
   line-height: 1.5;
 }
 
-/* Light mode background */
 html:not([data-theme="dark"]) body {
   background-image: linear-gradient(
     rgba(173, 216, 255, 0.28),
