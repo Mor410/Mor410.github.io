@@ -1,44 +1,37 @@
-{% include base_path %}
-
-<!-- start custom head snippets -->
-
-<!-- Support for Academicons -->
-<link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></noscript>
-
-<!-- Support for Font Awesome -->
- <link rel="preload" href="{{ base_path }}/assets/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ base_path }}/assets/css/fontawesome.css"></noscript>
-
-<!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
-<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
-<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
-<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
-<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
-<link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
-<link rel="icon" href="/images/favicon.ico"/>
-<meta name="theme-color" content="var(--global-bg-color)"/>
-
-
 <style>
   html[data-theme="light"] body {
     background-color: #f4f6f9 !important;
   }
-  html[data-theme="light"] .masthead, 
-  html[data-theme="light"] .page__content, 
-  html[data-theme="light"] .page, 
+  html[data-theme="light"] .masthead,
+  html[data-theme="light"] .page__content,
+  html[data-theme="light"] .page,
   html[data-theme="light"] #main {
     background-color: transparent !important;
   }
-  
+
+  html.light-theme body,
+  body.light-theme {
+    background-color: #f4f6f9 !important;
+  }
+  html.light-theme .masthead,
+  html.light-theme .page__content,
+  html.light-theme .page,
+  html.light-theme #main,
+  body.light-theme .masthead,
+  body.light-theme .page__content,
+  body.light-theme .page,
+  body.light-theme #main {
+    background-color: transparent !important;
+  }
+
   @media (prefers-color-scheme: light) {
-    html:not([data-theme="dark"]) body {
+    html:not([data-theme="dark"]):not(.dark-theme) body {
       background-color: #f4f6f9 !important;
     }
-    html:not([data-theme="dark"]) .masthead, 
-    html:not([data-theme="dark"]) .page__content, 
-    html:not([data-theme="dark"]) .page, 
-    html:not([data-theme="dark"]) #main {
+    html:not([data-theme="dark"]):not(.dark-theme) .masthead,
+    html:not([data-theme="dark"]):not(.dark-theme) .page__content,
+    html:not([data-theme="dark"]):not(.dark-theme) .page,
+    html:not([data-theme="dark"]):not(.dark-theme) #main {
       background-color: transparent !important;
     }
   }
